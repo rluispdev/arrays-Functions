@@ -95,3 +95,17 @@ print("My Num is  \(otherNumbers)")
 //MARK: - Mutabilidade: var = variavel mutavel , let = cosntante imutavel
 
 
+//MARK: - Listando o maior valor de um array
+
+var valores = [34, 55, 89,  7, 8, 41, 0, 90, 6]
+var valorInicial = valores[0]
+
+for  x in valores {
+    if valorInicial < x {
+        valorInicial = x
+    }
+}
+ 
+print("O maior valor do array é \(valorInicial).")
+
+///X representa todos elementos do array. E a condição diz: Toda vez que o valorInicial, que é variável declarada que se inicia no índex 0 do array, for menor, na comparação do elemento x do array, ela vai ser substituída pelo   maior  elemento do array que armazenará o valor máx do array.
