@@ -1,5 +1,6 @@
 import UIKit
 
+//Intro
 var grade1 = 46
 var grade2 = 5
 var grade3 = 15
@@ -12,6 +13,7 @@ var arrayOfInts: [Int]
 var arrayOfStrings: [String] = ["Nós", "❣️", "Swift"]
 var emptyArray: [Int] = []
 
+//MARK: - Obtendo Valores
 var listOfNumbers = [1,2,3,10, 100]
 var listOfNames = ["Andrei", "Silvo", "Claudio"]
 
@@ -39,6 +41,7 @@ for index in listOfNumbers {
     print(index)
 }
 
+//MARK: - Adicionando Valores
 
 var numbers: [Int] =  [ ]
 
@@ -61,12 +64,34 @@ otherNumbers += [7]
 
 print("Your new arry are: \(otherNumbers)")
 
+//MARK: - Remeovendo valores
 myNumbers.remove(at: 3)
 print(myNumbers)
 
-var thisNumbers: [Int] = [1,2,3]
+//MARK: - Alterando valores
+var thisNumbers: [Int] = [1,2,3, 4, 5]
 thisNumbers[0] = 7
 thisNumbers[1] = 5
 thisNumbers[2] = 4
 
 print(thisNumbers)
+
+thisNumbers [2...4] = [0, 0]
+print("New numbers  \(thisNumbers)")
+
+
+//MARK: - Inferencia de tipo
+var arrayNumbers = [1,2,3]
+var arrayStrings = ["We", "❣️", "Swift"]
+var arrayBools = [true, false, true, true, false]
+var emptyArrayOfInts: [Int] = []
+
+
+var  myNum = otherNumbers
+otherNumbers.append(90)
+
+print("My Num is  \(otherNumbers)")
+
+//MARK: - Mutabilidade: var = variavel mutavel , let = cosntante imutavel
+
+
