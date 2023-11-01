@@ -1,5 +1,6 @@
 import UIKit
-
+import Foundation
+import SwiftUI
 //Intro
 var grade1 = 46
 var grade2 = 5
@@ -97,7 +98,7 @@ print("My Num is  \(otherNumbers)")
 
 //MARK: - Listando o maior valor de um array
 
-var valores = [34, 55, 89,  7, 8, 41, 0, 90, 6]
+var valores = [0, 34, 55, 89,  7, 8, 41, 0, 90, 6]
 var valorInicial = valores[0]
 
 for  x in valores {
@@ -109,3 +110,72 @@ for  x in valores {
 print("O maior valor do array é \(valorInicial).")
 
 ///X representa todos elementos do array. E a condição diz: Toda vez que o valorInicial, que é variável declarada que se inicia no índex 0 do array, for menor, na comparação do elemento x do array, ela vai ser substituída pelo   maior  elemento do array que armazenará o valor máx do array.
+
+//MARK: - Retornando um valores impares
+
+for x in valores {
+    if x % 2 != 0 {
+        print( "This a odd number \(x).")
+    }
+}
+/// Codigo que imprime todos os valores impares de um array do tipo Int, onde  X representa todos elementos do array/ E a condicão diz: Se o  X for dividido por 2  e o resto for difrente (!=) de 0 print(x) porque todo numero par divido por 2 tem um resto 0.
+
+//MARK: - Somando todos valores do array
+var sum = 0
+for x in valores {
+    sum += x
+}
+print(sum)
+
+///O código soma todos os elementos do array. Declaramos uma var = 0 e o X representa todos elementos do array, onde dentro do loop for_ in, começa com 0 e soma e armazena o elemento do array a cada interação do loop. Por causa da presença do operador +=, por exemplo,  0 += 34, ficaria 34 += próximo elemento do array...
+
+//MARK: - Printando um index de um array
+
+var names = ["apple", "banana", "cherry", "mango"]
+
+var e = "cherry"
+
+//Genérico
+for e in names {
+    if let index = names.firstIndex(of: e){
+        print("Index of \(e) is \(index).")
+    }
+}
+
+//Swift
+names.forEach { e in
+    if let index = names.firstIndex(of: e){
+        print("Index2 of \(e) is \(index).")
+    }
+}
+
+//SwiftUI
+ForEach(Array(names.enumerated()), id: \.0) { index, name in
+    Text("Index \(index): \(name)")
+}
+
+
+/// Os 3 tipos de loop mosntram a impressão do index de um array   num loop generico, swift e SwiftUI, o generico  for_in {}  e o Swift forEach {in},  fazem a mesma coisa   procura o elemento dentro do array e nesse caso  temos um método firstIndex(of: ) que recebe uma variavel com um elemento do array e usa seu index, ele faz isso para rodos os elementos subsequentes,  usamos o nome do array no lugar de for e acrecentamos a palavra forEach, já no SwiftUI temos o ForEach, que tem um método Array que converte a funcao .enumereted em um array de tuplas, onde o ID seleciona o índice 0 e depois é chamado no tanto  index como o name em um text para ser exibido para o usuario ForEach() {}
+
+//MARK: - Imprimindo um loop na ordem inversa
+
+var inverseNumbers = [0, 1, 2, 3, 4, 5, 6]
+
+
+var num = inverseNumbers.reversed()
+for i in num {
+        print(i)
+    }
+
+var o = inverseNumbers.count - 1
+while o >= 0 {
+    print("This is while \(inverseNumbers[o])")
+    o -= 1
+}
+
+for i in 1...inverseNumbers.count {
+    print("THis for in 2  \(inverseNumbers[inverseNumbers.count - i])")
+}
+
+
+
