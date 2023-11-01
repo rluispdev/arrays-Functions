@@ -177,5 +177,45 @@ for i in 1...inverseNumbers.count {
     print("THis for in 2  \(inverseNumbers[inverseNumbers.count - i])")
 }
 
+/*
+ Nesta abordagem mais direta e legível, você usa o método reversed() para criar uma cópia invertida do array inverseNumbers. Em seguida, você usa um loop for-in para iterar pelos elementos da cópia invertida e imprimir os elementos na ordem inversa.
+ Usando um while loop:
+
+ Aqui, você utiliza um loop while para iterar pelos elementos do array inverseNumbers na ordem inversa. Começa pelo último índice do array (count - 1) e diminui o índice em cada iteração até chegar ao índice 0. Isso permite imprimir os elementos na ordem inversa.
+ Usando um segundo for-in loop:
+
+ Nesta abordagem, você usa um segundo loop for-in com um intervalo de 1 a inverseNumbers.count. A cada iteração, você calcula o índice reverso correspondente (inverseNumbers.count - i) e imprime o elemento do array na ordem inversa.
+ */
+//MARK: - Array  com valores aleatórios aleatório
+
+var shuflleNumbers = [1, 2, 3, 4, 5]
+shuflleNumbers.shuffle()
+print("Método Shuffle: \(shuflleNumbers)")
+
+var firstIndex = 0
+var lastIndex = shuflleNumbers.count - 1
+
+for _ in shuflleNumbers {
+   if  firstIndex > lastIndex {
+       var tmp = shuflleNumbers[firstIndex]
+       shuflleNumbers[firstIndex] = shuflleNumbers [lastIndex]
+       shuflleNumbers[lastIndex] = tmp
+       
+       firstIndex += 1
+       lastIndex -= 1
+    }
+}
+print("For_in: \(shuflleNumbers)")
+
+
+ while  firstIndex > lastIndex {
+       var tmp = shuflleNumbers[firstIndex]
+       shuflleNumbers[firstIndex] = shuflleNumbers [lastIndex]
+       shuflleNumbers[lastIndex] = tmp
+       
+       firstIndex += 1
+       lastIndex -= 1
+    }
+print("While: \(shuflleNumbers)")
 
 
