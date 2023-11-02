@@ -1,6 +1,7 @@
 import UIKit
 import Foundation
 import SwiftUI
+
 //Intro
 var grade1 = 46
 var grade2 = 5
@@ -242,15 +243,17 @@ if xAppears {
 let searchNumber = listsOfNumbers.filter { num in
     return x == num
 }
-print(searchNumber)
+print(x)
 
 //Filter
 let shortNumbers = listsOfNumbers.filter { num in
    return String(num).count > 2
- 
 }
-print("Filter \(shortNumbers)")
-
+if let index =  listsOfNumbers.firstIndex(of: x){
+    print("O valor \(x) está na posição \(index) do array.")
+} else {
+    "O valor \(x) não foi encontrado no array."
+}
 
 //O código começa com um array de inteiros, em seguida é declarado uma variável do tipo inteiro e uma do tipo bool, depois inteiramos o array num loop onde usamos uma condição comparando os elementos do loop com a variável criada. Em resumo, esse código compara x com os elementos do array e retorna se x está ou não presente no array retornando yes caso esteja e no caso não esteja.
 
@@ -260,3 +263,31 @@ print("Filter \(shortNumbers)")
 //Refatorando - Temos uma variavel computada de um array com metodo filter para  cada elemento do array, é  verificado esse elemento  é igual a x , se for o elemento é retornado.
 
 //Temos uma variável computada que filtra o array com método filter em busca de algum elemento que tenha mais de 2 caracteres, se encontrado este é retornado.
+
+// Temos uma variável calculada que usa o método firstIndex(of:), para buscar o valor x no array. Se o valor estiver presente no array, ele imprime a posição desse valor armazenada na variável index. Se o valor não for encontrado, ele imprime uma mensagem dizendo que o valor em questão não foi encontrado no array.
+
+//MARK: - Intersection
+
+var emojinsSky = ["☺️", "😮", "😇", "🥲", "🥹"]
+var emojinsHell = ["☺️", "😮", "😈", "🥲", "🤤"]
+
+ 
+for emoj2 in emojinsHell {
+    for emoj in emojinsSky{
+        if emoj == emoj2 {
+            print(emoj)
+            break
+        }
+    }
+}
+
+//Consigo fazer a intersection com filter
+let emojIntersection = emojinsSky.filter { emoj in
+    return emojinsHell.contains(emoj)
+}
+print(" 👾 \(emojIntersection) ")
+
+ 
+// Fazendo uma interseção entre dois arrays. Usamos um loop 'for-in' para percorrer os elementos do array 'emojinsSky' e criamos outro dentro do mesmo loop 'for-in' para percorrer o array 'emojinsHell'. Em seguida, aplicamos uma condição para ambos: se o elemento do primeiro array for igual ao elemento do segundo, imprimimos o elemento.
+
+//Fazendo uma interseção entre dois arrays. Este código utiliza o filter para comparar e retornar os elementos iguais de dois arrays.
