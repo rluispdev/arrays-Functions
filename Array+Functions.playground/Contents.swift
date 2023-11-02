@@ -186,7 +186,7 @@ for i in 1...inverseNumbers.count {
 
  Nesta abordagem, você usa um segundo loop for-in com um intervalo de 1 a inverseNumbers.count. A cada iteração, você calcula o índice reverso correspondente (inverseNumbers.count - i) e imprime o elemento do array na ordem inversa.
  */
-//MARK: - Array  com valores aleatórios aleatório
+//MARK: - Array  que retorna valores aleatórios
 
 var shuflleNumbers = [1, 2, 3, 4, 5]
 shuflleNumbers.shuffle()
@@ -218,4 +218,45 @@ print("For_in: \(shuflleNumbers)")
     }
 print("While: \(shuflleNumbers)")
 
+ 
+//MARK: -  Pesquisa/ Filter
 
+var listsOfNumbers = [1, 2, 3, 10, 100]
+
+var x = 10
+
+var xAppears = false
+
+for number in listOfNumbers {
+    if number == x {
+        xAppears = true
+    }
+}
+
+if xAppears {
+    print("yes")
+} else {
+    print("no")
+}
+ 
+let searchNumber = listsOfNumbers.filter { num in
+    return x == num
+}
+print(searchNumber)
+
+//Filter
+let shortNumbers = listsOfNumbers.filter { num in
+   return String(num).count > 2
+ 
+}
+print("Filter \(shortNumbers)")
+
+
+//O código começa com um array de inteiros, em seguida é declarado uma variável do tipo inteiro e uma do tipo bool, depois inteiramos o array num loop onde usamos uma condição comparando os elementos do loop com a variável criada. Em resumo, esse código compara x com os elementos do array e retorna se x está ou não presente no array retornando yes caso esteja e no caso não esteja.
+
+
+// O segundo código é uma variável computada que filtra o array de numeros inteiros listsNumbers e compara se   x que  é uma variavel  declarada do tipo inteiro é igual a um elemnto do array, se for retorna true se nao retorna false.
+
+//Refatorando - Temos uma variavel computada de um array com metodo filter para  cada elemento do array, é  verificado esse elemento  é igual a x , se for o elemento é retornado.
+
+//Temos uma variável computada que filtra o array com método filter em busca de algum elemento que tenha mais de 2 caracteres, se encontrado este é retornado.
