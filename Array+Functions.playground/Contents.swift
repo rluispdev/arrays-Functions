@@ -1,6 +1,7 @@
 import UIKit
 import Foundation
 import SwiftUI
+ 
 
 //Intro
 var grade1 = 46
@@ -334,4 +335,53 @@ print("Numeros impares \(p2)")
 
 //Este código filtra os valores pares de um array, retornando-os. Ele faz isso usando um filtro que percorre um array de números inteiros. Para cada elemento no array, ele aplica uma condição com o operador de módulo (%). Se o resultado dessa condição for verdadeiro, o elemento é retornado junto com o valor true. O retorno do valor true é necessário devido ao processo que ocorre no código. Quando um elemento corresponde à condição (ou seja, é par), o filtro o inclui em um novo array, criando assim um novo conjunto de números que atendem a essa condição. Portanto, o resultado final é um novo array contendo apenas os números pares do array original. O valor true não é o que é retornado, mas sim um marcador que indica quais elementos foram mantidos no novo array.
 
+
+//MARK: - Maior valor do array
+
+let heights = [67.4, 65.9, 54.6, 87.0, 12.8, 95.4]
+let greatestHeigth = heights.max()
+print(greatestHeigth)
+
+
+
+// Nesse código, temos uma variável com um array de números decimais (double) e outra variável computada. A variável computada executa uma ação, utilizando o método .max() para encontrar o maior valor decimal (double) dentro do array. Isso pode ser útil quando precisamos, por exemplo, determinar a maior temperatura de uma cidade."
+
+
+//MARK: -Fibbonnaci metodo interativo
+//
+//func fibonacciSeriers(num: Int) -> Int {
+//    var n1 = 0
+//    var n2 = 1
+//    var nR = 0
+//    
+//    for _ in 0..<num {
+//        var = n1
+//        var =  n2
+//        var = nR + n2
+//    }
+//    return n1
+//}
+//
+//var val = 10
+//print("Folowing is the Fibonacci series: ")
+//
+//
+//for j in 0...val{
+//    let output = fibonacciSeriers(num: j)
+//    print(output)
+//}
+
+var N = 10
+var fibonacci = [1, 1]
+
+for i in 2...N - 1 {
+    fibonacci.append(fibonacci[i-1] + fibonacci [i-2])
+}
+
+for number in fibonacci {
+    print(number)
+}
+
+ 
+// O código cria uma sequência Fibonacci com 10 elementos na sequência. Temos uma variável do tipo array chamada fibonacci, que se inicia com dois elementos inteiros iguais a 1. Em seguida, temos um loop for in que busca os elementos em um intervalo que vai de 2 até a variável N igual a 10 menos 1. Dentro do loop, adicionamos ao array fibonacci o elemento atual (índice - 1) somado ao elemento anterior (índice - 2). Depois, criamos outro loop for in que imprime os números do novo array criado em fibonacci.
 
