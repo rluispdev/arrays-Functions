@@ -99,7 +99,7 @@ print("My Num is  \(otherNumbers)")
 
 //MARK: - Listando o maior valor de um array
 
-var valores = [0, 34, 55, 89,  7, 8, 41, 0, 90, 6]
+var valores = [ 34, 55, 89,  7, 8, 41, 0, 90, 6]
 var valorInicial = valores[0]
 
 for  x in valores {
@@ -291,3 +291,47 @@ print(" 👾 \(emojIntersection) ")
 // Fazendo uma interseção entre dois arrays. Usamos um loop 'for-in' para percorrer os elementos do array 'emojinsSky' e criamos outro dentro do mesmo loop 'for-in' para percorrer o array 'emojinsHell'. Em seguida, aplicamos uma condição para ambos: se o elemento do primeiro array for igual ao elemento do segundo, imprimimos o elemento.
 
 //Fazendo uma interseção entre dois arrays. Este código utiliza o filter para comparar e retornar os elementos iguais de dois arrays.
+
+//MARK: - Divisors
+
+var divisors = [2, 4]
+
+for number in valores {
+    for divisor in divisors {
+        if number % divisor == 0{
+            print("Result: \(number)")
+            break
+        }
+    }
+}
+
+let divNumbers = valores.filter { num in
+    if num % 2 == 0 {
+        print("Func \(num)")
+    }
+    return true
+}
+ 
+//Numeros pares e impares com reduce
+let divide = valores.reduce(into:([Int](), [Int]())) { result, num in
+    if num % 2 == 0 {
+        result.0 .append(num)
+    }else {
+        result.1.append(num)
+    }
+}
+
+let p1 = divide.0
+let p2 = divide.1
+
+print("Numeros pares \(p1)")
+print("Numeros impares \(p2)")
+
+
+//  Temos dois arrays, um de números inteiros funcionando como dividendos e outro com dois números inteiros (2 e 4) funcionando como divisores. Temos dois loops que percorrem esses arrays, aplicando uma condição usando o operador de módulo, onde se o resto da divisão dos elementos do array de dividendos pelos elementos do array de divisores for igual a 0, o número é impresso, e o loop para esse elemento é encerrado com o break, continuando para os outros até o fim de todos os elementos do array de dividendos. Logo, este código verifica se todos os elementos de um array têm um resto igual a 0 ao dividi-los por um número específico.
+
+//  O código filtra valores pares do array, retornando-os. Temos um filtro que itera sobre um array de números inteiros e aplica uma condição com o operador de módulo, retornando o elemento e o valor true. O retorno do valor true se torna necessário devido às etapas que temos no código, onde, ao encontrar o valor que corresponde à condição, o filtro cria um novo array com os números que atendem a essa condição.
+
+//Este código filtra os valores pares de um array, retornando-os. Ele faz isso usando um filtro que percorre um array de números inteiros. Para cada elemento no array, ele aplica uma condição com o operador de módulo (%). Se o resultado dessa condição for verdadeiro, o elemento é retornado junto com o valor true. O retorno do valor true é necessário devido ao processo que ocorre no código. Quando um elemento corresponde à condição (ou seja, é par), o filtro o inclui em um novo array, criando assim um novo conjunto de números que atendem a essa condição. Portanto, o resultado final é um novo array contendo apenas os números pares do array original. O valor true não é o que é retornado, mas sim um marcador que indica quais elementos foram mantidos no novo array.
+
+
