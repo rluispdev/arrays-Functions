@@ -1,0 +1,31 @@
+//: [Previous](@previous)
+
+import Foundation
+
+//MARK: - Retornando o menor valor
+
+func min2 (_ a: Int, _ b: Int){
+    if a > b {
+        print(b)
+    } else{
+        print(a)
+    }
+}
+
+min2(-1, 0)
+
+// Temos uma função que recebe dois parâmetros implícitos. Essa função verifica uma condição: se 'a' for maior que 'b', imprime 'b'; caso contrário, imprime 'a'. Portanto, se chamarmos a função min2(9, 0), a função imprimirá '0'.
+
+
+// Usando o return
+
+func min3 (_ a: Int, _ b: Int) -> Int {
+    if a > b {
+        return b
+    } else {
+        return a
+    }
+}
+min2(3, 21)
+
+// Na função agora usamos um retorno do tipo Int que realiza a mesma operação que a função anterior. No entanto, agora é necessário utilizar a palavra 'return'. Ela retorna o valor '3' devido à condição 'a > b'.

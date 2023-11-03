@@ -347,7 +347,7 @@ print(greatestHeigth)
 // Nesse código, temos uma variável com um array de números decimais (double) e outra variável computada. A variável computada executa uma ação, utilizando o método .max() para encontrar o maior valor decimal (double) dentro do array. Isso pode ser útil quando precisamos, por exemplo, determinar a maior temperatura de uma cidade."
 
 
-//MARK: -Fibbonnaci metodo interativo
+//MARK: - Fibbonnaci
 //
 //func fibonacciSeriers(num: Int) -> Int {
 //    var n1 = 0
@@ -385,3 +385,4 @@ for number in fibonacci {
  
 // O código cria uma sequência Fibonacci com 10 elementos na sequência. Temos uma variável do tipo array chamada fibonacci, que se inicia com dois elementos inteiros iguais a 1. Em seguida, temos um loop for in que busca os elementos em um intervalo que vai de 2 até a variável N igual a 10 menos 1. Dentro do loop, adicionamos ao array fibonacci o elemento atual (índice - 1) somado ao elemento anterior (índice - 2). Depois, criamos outro loop for in que imprime os números do novo array criado em fibonacci.
 
+ 
