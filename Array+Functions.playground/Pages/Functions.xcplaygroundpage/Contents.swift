@@ -29,3 +29,14 @@ func min3 (_ a: Int, _ b: Int) -> Int {
 min2(3, 21)
 
 // Na função agora usamos um retorno do tipo Int que realiza a mesma operação que a função anterior. No entanto, agora é necessário utilizar a palavra 'return'. Ela retorna o valor '3' devido à condição 'a > b'.
+
+
+// MARK: - Retornando o ultimo digiyo
+
+func lastDigit(_ number: Int) -> Int {
+    return number % 32
+}
+
+lastDigit(65389)
+
+//Essa função tem um parâmetro number do tipo inteiro e retorna um inteiro. Ela tem um retorno interno do parâmetro number % 32, o que significa que para o parâmetro passado dividido por 32, o módulo será o resto da divisão
