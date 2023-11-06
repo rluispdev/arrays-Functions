@@ -58,3 +58,36 @@ first(9)
 
  
  // Essa função possui um parâmetro sem nome, N, do tipo Inteiro, e retorna um array de números inteiros. Dentro da função, há uma variável do tipo array de inteiros vazia para armazenar os números inteiros que serão adicionados a esse array por meio de um loop 'for in' em um intervalo de 1 até o parâmetro N que será passado ao chamar a função.
+
+
+//MARK: - Contagem Regressiva
+
+func countdown(_ N: Int) {
+    var i = N
+    
+    while i > 0 && i > -1 {
+        print(i)
+        sleep(1)
+        //Metodo adormece o thread por um determinado intervalo de tempo.
+        i -= 1
+    }
+    print("GO!")
+}
+ countdown(3)
+
+
+// Essa função recebe um parâmetro sem nome do tipo Inteiro, temos uma variavel  i com o parâmetro da função como tipo, temos um loop while enquanto i for maior que 0 e i maior que -1 printamos i , temos um método Sleep que aguarda 1 segundo para printar uma nova variavel ate atender a condicao no final é printado GO!
+ 
+
+func countdown2(_ i: Int) {
+    if i <= 0 {
+        print("Go! Countdown 2!")
+    } else {
+        print(i)
+        sleep(1)
+        countdown2(i - 1)
+    }
+}
+countdown2(5)
+
+//Na função countdown2(_:), temos um parâmetro sem nome do tipo inteiro. Se i for menor ou igual a 0, é impressa a mensagem 'Go! Countdown 2!'. Caso contrário, o valor de i é impresso com o método sleep, que adiciona um intervalo de 1 segundo entre cada valor do parâmetro i menos 1. Essa função cria uma contagem regressiva e imprime uma mensagem.
