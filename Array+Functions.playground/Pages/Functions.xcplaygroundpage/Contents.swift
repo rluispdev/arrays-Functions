@@ -31,7 +31,7 @@ min2(3, 21)
 // Na função agora usamos um retorno do tipo Int que realiza a mesma operação que a função anterior. No entanto, agora é necessário utilizar a palavra 'return'. Ela retorna o valor '3' devido à condição 'a > b'.
 
 
-// MARK: - Retornando o ultimo digiyo
+// MARK: - Retornando o ultimo digito
 
 func lastDigit(_ number: Int) -> Int {
     return number % 32
@@ -91,3 +91,42 @@ func countdown2(_ i: Int) {
 countdown2(5)
 
 //Na função countdown2(_:), temos um parâmetro sem nome do tipo inteiro. Se i for menor ou igual a 0, é impressa a mensagem 'Go! Countdown 2!'. Caso contrário, o valor de i é impresso com o método sleep, que adiciona um intervalo de 1 segundo entre cada valor do parâmetro i menos 1. Essa função cria uma contagem regressiva e imprime uma mensagem.
+
+//MARK: -  Numeros primos
+
+
+func divides( _ a: Int, _ b: Int) -> Bool {
+    return a % b == 0
+}
+
+func countDivisors(_ number: Int) -> Int {
+    var cnt = 0
+    for i in 1...number {
+        if divides(number, i) {
+            cnt += 1
+            
+        }
+    }
+    return cnt
+}
+
+func isPrime(_ number: Int) -> Bool {
+    return countDivisors(number) == 2
+}
+
+ 
+divides(2, 3)
+divides(6, 3)
+
+countDivisors(2)
+countDivisors(6)
+isPrime(2)
+isPrime(553)
+isPrime(13)
+
+// Essa função recebe dois parâmetros, a e b sem nome do tipo Int, e retorna um booleano, onde antes do retorno é verificado se o resto da divisão de a por b é igual a zero, sendo retorna true, se não false.
+
+//Essa função recebe um parâmetro sem nome chamado number do tipo Inteiro, e retorna um inteiro, para contar quantos divisores number possui. Dentro da função é criado uma variavel cnt que vai armazenar a contagem dos divisores. Temos um loop que que busca i num range de 1 até o valor passado na variavel number, para cada valor i nesse range a função divides é chamada, se um number for divisivel por i isso significa que i é um divisor de number e a variavel cnt é incrementada em 1 paracontar esse divisor. No fim a função retorna o valor de cnt que é a contagem de divisores de number.
+
+
+    //Esta função recebe um parâmetro sem nome com um argumento do tipo inteiro chamado 'number', do tipo Inteiro, e retorna um valor booleano. Ela verifica se a função 'countDivisors' conta quantos divisores o número 'number' possui e, se o resultado for igual a 2, a função 'isPrime' retorna verdadeiro, o que indica que o número é primo.
