@@ -111,18 +111,35 @@ func countDivisors(_ number: Int) -> Int {
 }
 
 func isPrime(_ number: Int) -> Bool {
-    return countDivisors(number) == 2
+    if countDivisors(number) == 2{
+        print("This \(number) is Prime!")
+        return true
+    } else {
+        return false
+    }
 }
 
- 
+
+///opção 2
+func isPrime2(_ number: Int) -> Bool {
+    
+    if countDivisors(number) == 2 {
+        print("This \(number) is Prime!")
+    } else {
+        print("This \(number) not is!")
+    }
+    return true
+}
+
+
 divides(2, 3)
 divides(6, 3)
 
 countDivisors(2)
 countDivisors(6)
-isPrime(2)
-isPrime(553)
-isPrime(13)
+isPrime(3)
+isPrime(5)
+isPrime(4)
 
 // Essa função recebe dois parâmetros, a e b sem nome do tipo Int, e retorna um booleano, onde antes do retorno é verificado se o resto da divisão de a por b é igual a zero, sendo retorna true, se não false.
 
@@ -130,3 +147,39 @@ isPrime(13)
 
 
     //Esta função recebe um parâmetro sem nome com um argumento do tipo inteiro chamado 'number', do tipo Inteiro, e retorna um valor booleano. Ela verifica se a função 'countDivisors' conta quantos divisores o número 'number' possui e, se o resultado for igual a 2, a função 'isPrime' retorna verdadeiro, o que indica que o número é primo.
+
+
+//Imprimindo os primeiros numeros primos
+
+print("______________________________")
+
+
+func printFirstPrimes(_ count: Int) {
+    var i = 2
+    var printed = 0
+    while printed < count {
+        if isPrime(i) {
+           printed += 1
+            print(i)
+        }
+         i += 1
+    }
+}
+ 
+print("______________________________")
+
+// Imprimindo números primos de 0 a 100
+
+func printIntervalPrimes( _ finalValue: Int) {
+    var i = 2
+    var printed = 0
+    
+    while i <= finalValue {
+        if isPrime(i){
+           printed += 1
+        }
+        i += 1
+    }
+}
+printIntervalPrimes(13)
+ 
