@@ -22,14 +22,19 @@ func isPrime(_ number: Int) -> Bool {
     }
 }
 
-func printIntervalPrimes( _ finalValue: Int) {
-    for i in 2...finalValue {
-        if isPrime(i){
+func printIntervalPrimes( _ initialValue: Int, _ finalValue: Int) {
+    for i in initialValue...finalValue {
+        
+        if initialValue < 2 {
+            print("The number \(initialValue) no is a number prime. Start with number 2.")
+            break
+        }
+        else  if isPrime(i){
             print("Prime: \(i)")
-                
+            
         }
     }
 }
-printIntervalPrimes(10)
+printIntervalPrimes(0, 20)
 
-
+ 
